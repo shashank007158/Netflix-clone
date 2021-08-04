@@ -1,0 +1,118 @@
+.signup--form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  &__label {
+    text-align: center;
+    color: white;
+    margin: 1.5rem;
+    margin-bottom: 0.5rem;
+    label {
+      font-size: 2rem;
+    }
+  }
+  &__input--box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+    input {
+      width: 70%;
+      padding: 2rem;
+      font-size: 1.5rem;
+      &:focus {
+        outline: none;
+      }
+      &:focus ~ .placeholder,
+      &:invalid:not(:focus) ~ .placeholder {
+        font-size: 1.3rem;
+        top: 2.5rem;
+      }
+      &:invalid:not(:focus) {
+        border-bottom: 0.25rem solid #ffa00a;
+      }
+      &:invalid:not(:focus) ~ .warning {
+        opacity: 1;
+      }
+    }
+    .warning {
+      position: absolute;
+      color: #ffa00a;
+      text-align: left;
+      bottom: 0;
+      left: 11rem;
+      opacity: 0;
+      font-size: 1.5rem;
+      transition: all 0.2s ease;
+    }
+    .placeholder {
+      position: absolute;
+      left: 6%;
+      font-size: 1.5rem;
+      transition: all 0.3s cubic-bezier(0.35, -0.08, 1, -0.31);
+      color: rgb(155, 151, 151);
+      cursor: default;
+    }
+    .signup--form__button {
+      width: 30%;
+      font-size: 2.5rem;
+      font-weight: 200;
+      padding: 1.6rem;
+    }
+  }
+}
+@media (max-width: 1045px) {
+  .signup--form__input--box {
+    width: 80%;
+    flex-direction: column;
+    input {
+      width: 100%;
+    }
+
+    .signup--form__button {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      padding: 1rem 1.5rem;
+      width: auto;
+    }
+    .placeholder {
+      top: 4rem;
+      left: 3rem;
+    }
+  }
+  .signup--form__label {
+    width: 80%;
+  }
+}
+@media (max-width: 550px) {
+  .signup--form__input--box {
+    width: 80%;
+    input {
+      width: 100%;
+      padding: 1.5rem;
+    }
+    .placeholder {
+      top: 3.5rem;
+      left: 3rem;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .signup--form__label {
+    label {
+      font-size: 1.75rem;
+    }
+  }
+  .signup--form__input--box {
+    padding-bottom: 5rem;
+
+    .placeholder {
+      top: 3.5rem;
+      left: 3rem;
+    }
+  }
+}

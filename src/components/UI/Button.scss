@@ -1,0 +1,13 @@
+.btn {
+  background-color: #e50914;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.25rem;
+
+  &:link {
+    text-decoration: none;
+  }
+}

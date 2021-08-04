@@ -1,0 +1,133 @@
+.access {
+  display: grid;
+  grid-template-areas: "content image";
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  background: #000;
+  border-bottom: 0.7rem solid rgb(61, 59, 59);
+  position: relative;
+  z-index: 10;
+  padding: 5rem 25rem 5rem 10rem;
+  grid-column-gap: 5rem;
+
+  &--content {
+    grid: content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+
+    &--heading {
+      width: 100%;
+      h1 {
+        font-size: 5rem;
+      }
+    }
+    &--sub__heading {
+      margin-top: 3rem;
+      width: 100%;
+      h3 {
+        font-size: 3rem;
+        font-weight: lighter;
+      }
+    }
+  }
+
+  &--container {
+    grid: image;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &--image {
+      img {
+        //height: 40rem;
+        width: 150%;
+        position: relative;
+      }
+    }
+    &--video {
+      position: absolute;
+      top: 33%;
+      left: 63%;
+      max-width: 70%;
+      max-height: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      width: 100%;
+      video {
+        //height: 25rem;
+        width: 130%;
+      }
+    }
+  }
+}
+@media (max-width: 1045px) {
+  .access {
+    grid-template-areas: "content" "image";
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    padding: 10rem 3rem;
+
+    &--content {
+      width: 90%;
+      margin: 0 auto;
+      &--heading {
+        h1 {
+          font-size: 4rem;
+        }
+      }
+      &--sub__heading {
+        h3 {
+          font-size: 2rem;
+        }
+      }
+    }
+    &--container {
+      img {
+        width: 100%;
+      }
+      &--video {
+        left: 50%;
+        video {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 550px) {
+  .access {
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 3rem;
+
+    &--content {
+      width: 100%;
+      margin: 0 auto;
+      &--heading {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+    &--container {
+      margin-top: 3rem;
+      padding-right: 2rem;
+      img {
+        width: 110%;
+      }
+      &--video {
+        left: 55%;
+        video {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
