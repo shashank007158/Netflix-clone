@@ -5,7 +5,7 @@
   justify-content: center;
   place-items: center;
   background: #000;
-  border-bottom: 0.7rem solid rgb(61, 59, 59);
+  border-bottom: 0.7rem solid $color-border;
   position: relative;
   z-index: 10;
   padding: 5rem 25rem 5rem 10rem;
@@ -30,7 +30,6 @@
       width: 100%;
       h3 {
         font-size: 3rem;
-        font-weight: lighter;
       }
     }
   }
@@ -123,9 +122,9 @@
         width: 110%;
       }
       &--video {
-        left: 55%;
+        left: 50%;
         video {
-          width: 100%;
+          width: 95%;
         }
       }
     }
